@@ -1,0 +1,29 @@
+﻿<Window x:Class="sp3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:sp3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="190" Width="482.1">
+    <StackPanel Margin="20 20 20 0">
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Source" Width="75"/>
+            <TextBox Name="tbSource" VerticalContentAlignment="Center" Width="265" IsEnabled="False"/>
+            <Button Name="btSource" Click="Source_Click" Content="Select" Width="75" Margin="10 0"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0 10">
+            <Label Content="Destination" Width="75"/>
+            <TextBox Name="tbDestination" VerticalContentAlignment="Center" Width="265" IsEnabled="False"/>
+            <Button Name="btDestination" Click="Destination_Click" Content="Select" Width="75" Margin="10 0"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Key" Width="75"/>
+            <TextBox Name="tbKey" VerticalContentAlignment="Center" Width="100" Margin="0 0 11 0"/>
+            <RadioButton VerticalAlignment="Center" IsChecked="True" Content="Encode" Name="rbEncode" Margin="0 0 20 0"/>
+            <RadioButton VerticalAlignment="Center" Content="Dencode" Name="rbDecode" Margin="0 0 20 0"/>
+            <Button Name="btExecute" Click="Execute_Click" Width="75" Content="Execute" Background="LightGreen"/>
+        </StackPanel>
+        <ProgressBar Name="progress" Height="10" Margin="3 10 3 0"/>
+    </StackPanel>
+</Window>
